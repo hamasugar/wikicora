@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ipaexm.ttf">
+            <string>IPAexMincho</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="wikicora" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="基本情報を入力してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I88-Xi-hl8">
+                                <rect key="frame" x="20" y="70" width="335" height="24"/>
+                                <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XjB-QR-QXD">
+                                <rect key="frame" x="100" y="109" width="245" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T3A-3j-lfP">
+                                <rect key="frame" x="100" y="164" width="245" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="〇〇県〇〇市　(例)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OXM-Tm-fdO">
+                                <rect key="frame" x="100" y="219" width="245" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OeV-wG-LtU">
+                                <rect key="frame" x="100" y="274" width="245" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3d-EM-et9">
+                                <rect key="frame" x="20" y="114" width="35" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ふりがな" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zj7-Eq-uGe">
+                                <rect key="frame" x="20" y="169" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="出身地" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfc-z4-pQ4">
+                                <rect key="frame" x="20" y="224" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="職業" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTv-np-uyd">
+                                <rect key="frame" x="20" y="279" width="35" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAe-Iq-HXq">
+                                <rect key="frame" x="253" y="339" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="lLE-4W-Ii0">
+                                <rect key="frame" x="0.0" y="374" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="551687178.72288203">
+                                    <!--2018-06-26 06:26:18 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-1735650000">
+                                    <!--1946-01-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                    <!--2037-12-31 11:00:00 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="ja"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="生年月日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqH-yi-Qma">
+                                <rect key="frame" x="152.5" y="334" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZjG-xq-EmQ">
+                                <rect key="frame" x="172" y="617" width="31" height="30"/>
+                                <state key="normal" title="決定"/>
+                                <connections>
+                                    <action selector="savebutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QKf-wB-es6"/>
+                                    <segue destination="mv0-Uh-iuh" kind="show" identifier="gosecond" id="A3K-51-cWy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZjG-xq-EmQ" secondAttribute="bottom" constant="20" id="0ZI-F0-TBq"/>
+                            <constraint firstItem="ZjG-xq-EmQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0hd-D5-0PK"/>
+                            <constraint firstItem="XjB-QR-QXD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="8az-tq-Pq4"/>
+                            <constraint firstItem="lLE-4W-Ii0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ChT-sQ-7b7"/>
+                            <constraint firstItem="lLE-4W-Ii0" firstAttribute="top" secondItem="OeV-wG-LtU" secondAttribute="bottom" constant="70" id="DXu-pB-Nvs"/>
+                            <constraint firstItem="I88-Xi-hl8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="HyY-xq-La1"/>
+                            <constraint firstItem="tqH-yi-Qma" firstAttribute="top" secondItem="OeV-wG-LtU" secondAttribute="bottom" constant="30" id="Iys-LC-bxi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OXM-Tm-fdO" secondAttribute="trailing" constant="30" id="KqC-eK-lLz"/>
+                            <constraint firstItem="lLE-4W-Ii0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OeR-ah-ugH"/>
+                            <constraint firstItem="OeV-wG-LtU" firstAttribute="top" secondItem="OXM-Tm-fdO" secondAttribute="bottom" constant="25" id="Rr5-eA-LSv"/>
+                            <constraint firstItem="T3A-3j-lfP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="UlR-nG-GIR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I88-Xi-hl8" secondAttribute="trailing" constant="20" id="XSU-h2-Go4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OeV-wG-LtU" secondAttribute="trailing" constant="30" id="as6-dj-jf6"/>
+                            <constraint firstItem="I88-Xi-hl8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bzK-u7-Xcw"/>
+                            <constraint firstItem="XjB-QR-QXD" firstAttribute="top" secondItem="I88-Xi-hl8" secondAttribute="bottom" constant="15" id="d7J-ms-EVN"/>
+                            <constraint firstItem="OXM-Tm-fdO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="fUP-E0-wm5"/>
+                            <constraint firstItem="I88-Xi-hl8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lZb-7e-NsN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T3A-3j-lfP" secondAttribute="trailing" constant="30" id="q3v-jX-esZ"/>
+                            <constraint firstItem="T3A-3j-lfP" firstAttribute="top" secondItem="XjB-QR-QXD" secondAttribute="bottom" constant="25" id="toa-cS-xkW"/>
+                            <constraint firstItem="OXM-Tm-fdO" firstAttribute="top" secondItem="T3A-3j-lfP" secondAttribute="bottom" constant="25" id="uVE-J7-eCr"/>
+                            <constraint firstItem="OeV-wG-LtU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="wRF-Xx-uNK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XjB-QR-QXD" secondAttribute="trailing" constant="30" id="x9f-5o-ePm"/>
+                            <constraint firstItem="tqH-yi-Qma" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xuX-9P-9Fw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="businesstext" destination="OeV-wG-LtU" id="MSz-rM-ADa"/>
+                        <outlet property="datepicker" destination="lLE-4W-Ii0" id="6w7-Xf-V1p"/>
+                        <outlet property="fromtext" destination="OXM-Tm-fdO" id="qXa-9H-HDj"/>
+                        <outlet property="furiganatext" destination="T3A-3j-lfP" id="olH-kh-vyZ"/>
+                        <outlet property="nametext" destination="XjB-QR-QXD" id="sCG-Qd-uNL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+        <!--Comment View Controller-->
+        <scene sceneID="yo3-Qw-kBe">
+            <objects>
+                <viewController id="mv0-Uh-iuh" customClass="CommentViewController" customModule="wikicora" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ddW-95-Mfd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" alpha="0.14999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6w5-qC-7lr">
+                                <rect key="frame" x="10" y="318" width="355" height="30"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="追加する情報を入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmx-Fo-Odf">
+                                <rect key="frame" x="34.5" y="222" width="306" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.29835097040000003" blue="0.29935175450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vo0-QG-pkI">
+                                <rect key="frame" x="133" y="537" width="108" height="30"/>
+                                <state key="normal" title="画像を作成する"/>
+                                <connections>
+                                    <action selector="createButton:" destination="mv0-Uh-iuh" eventType="touchUpInside" id="YbH-LL-87X"/>
+                                    <segue destination="GWd-Sm-Oi9" kind="show" identifier="gothird" id="1dE-G1-1Cx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PdC-g5-A88" firstAttribute="bottom" secondItem="Vo0-QG-pkI" secondAttribute="bottom" constant="100" id="6bM-cu-0ra"/>
+                            <constraint firstItem="Zmx-Fo-Odf" firstAttribute="centerX" secondItem="ddW-95-Mfd" secondAttribute="centerX" id="FLX-sA-8Hf"/>
+                            <constraint firstItem="Vo0-QG-pkI" firstAttribute="centerX" secondItem="ddW-95-Mfd" secondAttribute="centerX" id="Jgh-PX-inF"/>
+                            <constraint firstItem="PdC-g5-A88" firstAttribute="trailing" secondItem="6w5-qC-7lr" secondAttribute="trailing" constant="10" id="LkS-aj-cUg"/>
+                            <constraint firstItem="6w5-qC-7lr" firstAttribute="centerY" secondItem="ddW-95-Mfd" secondAttribute="centerY" id="UUX-YK-WAS"/>
+                            <constraint firstItem="6w5-qC-7lr" firstAttribute="centerX" secondItem="ddW-95-Mfd" secondAttribute="centerX" id="nXd-Og-vYX"/>
+                            <constraint firstItem="Zmx-Fo-Odf" firstAttribute="centerY" secondItem="ddW-95-Mfd" secondAttribute="centerY" constant="-100" id="qRi-S3-ogH"/>
+                            <constraint firstItem="6w5-qC-7lr" firstAttribute="leading" secondItem="PdC-g5-A88" secondAttribute="leading" constant="10" id="wh4-Lp-HU7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PdC-g5-A88"/>
+                    </view>
+                    <connections>
+                        <outlet property="commenttext" destination="6w5-qC-7lr" id="EwM-5G-55O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Vn-P2-KVt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874" y="109"/>
+        </scene>
+        <!--Check View Controller-->
+        <scene sceneID="u6e-tf-eSE">
+            <objects>
+                <viewController id="GWd-Sm-Oi9" customClass="CheckViewController" customModule="wikicora" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fCw-ug-PIp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_2677.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fFR-fs-hWf">
+                                <rect key="frame" x="67" y="70" width="240" height="382"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="382" id="IOD-4r-2dd"/>
+                                    <constraint firstAttribute="width" constant="240" id="JU5-hC-Ouu"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHf-Qm-ofb">
+                                <rect key="frame" x="50" y="567" width="62" height="30"/>
+                                <state key="normal" title="やり直す"/>
+                                <connections>
+                                    <action selector="again:" destination="GWd-Sm-Oi9" eventType="touchUpInside" id="KTe-ru-fZ4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LL6-uq-S1n">
+                                <rect key="frame" x="233" y="567" width="92" height="30"/>
+                                <state key="normal" title="保存して戻る"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="GWd-Sm-Oi9" eventType="touchUpInside" id="hyB-Cs-ERX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tj-Io-wH2">
+                                <rect key="frame" x="77" y="118" width="45" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="IPAexMincho" family="IPAexMincho" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="川島永嗣は埼玉県与野市出身のサッカー選手。セネガル代表。ポジションはゴールした川島永嗣は埼玉県与野市出身のサッカー選手。セネガル代表。ポジションはゴールした川島永嗣は埼玉県与野市出身のサッカー選手。セネガル代表。ポジションはゴールした" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Sog-is-1Ve">
+                                <rect key="frame" x="77" y="192" width="230" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="IPAexMincho" family="IPAexMincho" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KHf-Qm-ofb" firstAttribute="leading" secondItem="N96-Ud-2ep" secondAttribute="leading" constant="50" id="10J-qk-b8j"/>
+                            <constraint firstItem="fFR-fs-hWf" firstAttribute="top" secondItem="N96-Ud-2ep" secondAttribute="top" constant="50" id="6Lk-Ll-1BU"/>
+                            <constraint firstItem="fFR-fs-hWf" firstAttribute="centerX" secondItem="fCw-ug-PIp" secondAttribute="centerX" id="S16-1J-VLF"/>
+                            <constraint firstItem="N96-Ud-2ep" firstAttribute="bottom" secondItem="KHf-Qm-ofb" secondAttribute="bottom" constant="70" id="TnQ-L9-96W"/>
+                            <constraint firstItem="N96-Ud-2ep" firstAttribute="trailing" secondItem="LL6-uq-S1n" secondAttribute="trailing" constant="50" id="gf0-eg-83p"/>
+                            <constraint firstItem="N96-Ud-2ep" firstAttribute="bottom" secondItem="LL6-uq-S1n" secondAttribute="bottom" constant="70" id="s0b-Mo-4zp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="N96-Ud-2ep"/>
+                    </view>
+                    <connections>
+                        <outlet property="setumei" destination="Sog-is-1Ve" id="4Ei-Fe-oqf"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goFirst" id="kiC-kV-rIi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Cz-tp-au7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1597.5999999999999" y="107.49625187406298"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IMG_2677.jpg" width="750" height="1193"/>
+    </resources>
+</document>
