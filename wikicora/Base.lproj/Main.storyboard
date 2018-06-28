@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -268,11 +268,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8f-a3-LPE">
+                                <rect key="frame" x="77.5" y="143" width="220" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="7Ji-j6-v4b"/>
+                                    <constraint firstAttribute="width" constant="220" id="APt-oq-ceS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IPAexMincho" family="IPAexMincho" pointSize="8"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="KHf-Qm-ofb" firstAttribute="leading" secondItem="N96-Ud-2ep" secondAttribute="leading" constant="50" id="10J-qk-b8j"/>
                             <constraint firstItem="1tj-Io-wH2" firstAttribute="top" secondItem="N96-Ud-2ep" secondAttribute="top" constant="98" id="3YB-WE-ss1"/>
+                            <constraint firstItem="E8f-a3-LPE" firstAttribute="centerX" secondItem="fCw-ug-PIp" secondAttribute="centerX" id="3t3-Bi-Dud"/>
+                            <constraint firstItem="E8f-a3-LPE" firstAttribute="top" secondItem="1tj-Io-wH2" secondAttribute="bottom" constant="8" id="54R-Eb-YyA"/>
                             <constraint firstItem="fFR-fs-hWf" firstAttribute="top" secondItem="N96-Ud-2ep" secondAttribute="top" constant="50" id="6Lk-Ll-1BU"/>
                             <constraint firstItem="Sog-is-1Ve" firstAttribute="centerX" secondItem="fCw-ug-PIp" secondAttribute="centerX" id="Chc-XW-Vow"/>
                             <constraint firstItem="1tj-Io-wH2" firstAttribute="centerX" secondItem="fCw-ug-PIp" secondAttribute="centerX" id="Ljc-qm-Aj5"/>
@@ -286,6 +298,7 @@
                     </view>
                     <connections>
                         <outlet property="fullname" destination="1tj-Io-wH2" id="9ya-qt-nj6"/>
+                        <outlet property="omake" destination="E8f-a3-LPE" id="O38-MI-SKW"/>
                         <outlet property="setumei" destination="Sog-is-1Ve" id="4Ei-Fe-oqf"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goFirst" id="kiC-kV-rIi"/>
                     </connections>
