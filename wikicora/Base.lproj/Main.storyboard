@@ -113,7 +113,6 @@
                                 <state key="normal" title="決定"/>
                                 <connections>
                                     <action selector="savebutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QKf-wB-es6"/>
-                                    <segue destination="mv0-Uh-iuh" kind="show" identifier="gosecond" id="A3K-51-cWy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -151,6 +150,7 @@
                         <outlet property="fromtext" destination="OXM-Tm-fdO" id="qXa-9H-HDj"/>
                         <outlet property="furiganatext" destination="T3A-3j-lfP" id="olH-kh-vyZ"/>
                         <outlet property="nametext" destination="XjB-QR-QXD" id="sCG-Qd-uNL"/>
+                        <segue destination="mv0-Uh-iuh" kind="show" identifier="gosecond" id="Pae-tg-jPy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -165,7 +165,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" alpha="0.14999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6w5-qC-7lr">
+                            <textField opaque="NO" alpha="0.14999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="最後の　。は不要" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6w5-qC-7lr">
                                 <rect key="frame" x="10" y="318" width="355" height="30"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="textColor"/>
@@ -183,25 +183,36 @@
                                 <state key="normal" title="画像を作成する"/>
                                 <connections>
                                     <action selector="createButton:" destination="mv0-Uh-iuh" eventType="touchUpInside" id="YbH-LL-87X"/>
-                                    <segue destination="GWd-Sm-Oi9" kind="show" identifier="gothird" id="1dE-G1-1Cx"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqZ-70-8VT">
+                                <rect key="frame" x="0.0" y="283.5" width="375" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.29835097040000003" blue="0.29935175450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="PdC-g5-A88" firstAttribute="bottom" secondItem="Vo0-QG-pkI" secondAttribute="bottom" constant="100" id="6bM-cu-0ra"/>
+                            <constraint firstItem="wqZ-70-8VT" firstAttribute="centerY" secondItem="ddW-95-Mfd" secondAttribute="centerY" constant="-50" id="DGq-4F-Rjc"/>
                             <constraint firstItem="Zmx-Fo-Odf" firstAttribute="centerX" secondItem="ddW-95-Mfd" secondAttribute="centerX" id="FLX-sA-8Hf"/>
                             <constraint firstItem="Vo0-QG-pkI" firstAttribute="centerX" secondItem="ddW-95-Mfd" secondAttribute="centerX" id="Jgh-PX-inF"/>
                             <constraint firstItem="PdC-g5-A88" firstAttribute="trailing" secondItem="6w5-qC-7lr" secondAttribute="trailing" constant="10" id="LkS-aj-cUg"/>
+                            <constraint firstItem="wqZ-70-8VT" firstAttribute="leading" secondItem="PdC-g5-A88" secondAttribute="leading" id="PgQ-bY-AQb"/>
                             <constraint firstItem="6w5-qC-7lr" firstAttribute="centerY" secondItem="ddW-95-Mfd" secondAttribute="centerY" id="UUX-YK-WAS"/>
+                            <constraint firstItem="PdC-g5-A88" firstAttribute="trailing" secondItem="wqZ-70-8VT" secondAttribute="trailing" id="jOW-C8-JzE"/>
                             <constraint firstItem="6w5-qC-7lr" firstAttribute="centerX" secondItem="ddW-95-Mfd" secondAttribute="centerX" id="nXd-Og-vYX"/>
                             <constraint firstItem="Zmx-Fo-Odf" firstAttribute="centerY" secondItem="ddW-95-Mfd" secondAttribute="centerY" constant="-100" id="qRi-S3-ogH"/>
+                            <constraint firstItem="wqZ-70-8VT" firstAttribute="centerX" secondItem="ddW-95-Mfd" secondAttribute="centerX" id="sax-8I-NzX"/>
                             <constraint firstItem="6w5-qC-7lr" firstAttribute="leading" secondItem="PdC-g5-A88" secondAttribute="leading" constant="10" id="wh4-Lp-HU7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PdC-g5-A88"/>
                     </view>
                     <connections>
                         <outlet property="commenttext" destination="6w5-qC-7lr" id="EwM-5G-55O"/>
+                        <outlet property="limittext" destination="wqZ-70-8VT" id="hhF-lY-uGN"/>
+                        <segue destination="GWd-Sm-Oi9" kind="show" identifier="gothird" id="Let-eL-Q0r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Vn-P2-KVt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -237,16 +248,22 @@
                                     <action selector="saveButton:" destination="GWd-Sm-Oi9" eventType="touchUpInside" id="hyB-Cs-ERX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tj-Io-wH2">
-                                <rect key="frame" x="77" y="118" width="45" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tj-Io-wH2">
+                                <rect key="frame" x="77.5" y="118" width="220" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="j8V-mh-C4H"/>
+                                    <constraint firstAttribute="height" constant="17" id="khc-Ry-5zX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="IPAexMincho" family="IPAexMincho" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="川島永嗣は埼玉県与野市出身のサッカー選手。セネガル代表。ポジションはゴールした川島永嗣は埼玉県与野市出身のサッカー選手。セネガル代表。ポジションはゴールした川島永嗣は埼玉県与野市出身のサッカー選手。セネガル代表。ポジションはゴールした" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Sog-is-1Ve">
-                                <rect key="frame" x="77" y="192" width="230" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="川島永嗣は埼玉県与野市出身のサッカー選手。セネガル代表。ポジションはゴールした川島永嗣は埼玉県与野市出身のサッカー選手。セネガル代表。ポジションはゴールした川島永嗣は埼玉県与野市出身のサッカー選手。セネガル代表。ポジションはゴールした" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Sog-is-1Ve">
+                                <rect key="frame" x="77.5" y="185" width="220" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="103" id="SmI-se-1Cc"/>
+                                    <constraint firstAttribute="width" constant="220" id="iOi-qm-JkX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="IPAexMincho" family="IPAexMincho" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -255,8 +272,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="KHf-Qm-ofb" firstAttribute="leading" secondItem="N96-Ud-2ep" secondAttribute="leading" constant="50" id="10J-qk-b8j"/>
+                            <constraint firstItem="1tj-Io-wH2" firstAttribute="top" secondItem="N96-Ud-2ep" secondAttribute="top" constant="98" id="3YB-WE-ss1"/>
                             <constraint firstItem="fFR-fs-hWf" firstAttribute="top" secondItem="N96-Ud-2ep" secondAttribute="top" constant="50" id="6Lk-Ll-1BU"/>
+                            <constraint firstItem="Sog-is-1Ve" firstAttribute="centerX" secondItem="fCw-ug-PIp" secondAttribute="centerX" id="Chc-XW-Vow"/>
+                            <constraint firstItem="1tj-Io-wH2" firstAttribute="centerX" secondItem="fCw-ug-PIp" secondAttribute="centerX" id="Ljc-qm-Aj5"/>
                             <constraint firstItem="fFR-fs-hWf" firstAttribute="centerX" secondItem="fCw-ug-PIp" secondAttribute="centerX" id="S16-1J-VLF"/>
+                            <constraint firstItem="Sog-is-1Ve" firstAttribute="top" secondItem="N96-Ud-2ep" secondAttribute="top" constant="165" id="TWS-8U-Nic"/>
                             <constraint firstItem="N96-Ud-2ep" firstAttribute="bottom" secondItem="KHf-Qm-ofb" secondAttribute="bottom" constant="70" id="TnQ-L9-96W"/>
                             <constraint firstItem="N96-Ud-2ep" firstAttribute="trailing" secondItem="LL6-uq-S1n" secondAttribute="trailing" constant="50" id="gf0-eg-83p"/>
                             <constraint firstItem="N96-Ud-2ep" firstAttribute="bottom" secondItem="LL6-uq-S1n" secondAttribute="bottom" constant="70" id="s0b-Mo-4zp"/>
@@ -264,6 +285,7 @@
                         <viewLayoutGuide key="safeArea" id="N96-Ud-2ep"/>
                     </view>
                     <connections>
+                        <outlet property="fullname" destination="1tj-Io-wH2" id="9ya-qt-nj6"/>
                         <outlet property="setumei" destination="Sog-is-1Ve" id="4Ei-Fe-oqf"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goFirst" id="kiC-kV-rIi"/>
                     </connections>

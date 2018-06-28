@@ -13,8 +13,25 @@ class CommentViewController: UIViewController {
     
     @IBOutlet weak var commenttext: UITextField!
     
+    @IBOutlet weak var limittext: UILabel!
+    
+    var minimum:Int = 0
+    var maximum:Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var lengthArray = UserDefaults.standard.object(forKey: "length") as! [Int]
+        
+        var nowcount = lengthArray[0]+lengthArray[1]+lengthArray[2]+lengthArray[3]
+        
+         minimum = 46-nowcount
+         maximum = 86-nowcount
+        
+        
+        limittext.text = "\(minimum)文字以上\(maximum)文字以下で入力してください"
+        
+        
 
         // Do any additional setup after loading the view.
     }
@@ -27,13 +44,37 @@ class CommentViewController: UIViewController {
     @IBAction func createButton(_ sender: Any) {
         
         
+        if commenttext.text!.count>=minimum  && commenttext.text!.count<=maximum{
+            
+            
+        
         var stringArray = UserDefaults.standard.object(forKey: "information") as! [String]
         
         stringArray.append(commenttext.text!)
         
         UserDefaults.standard.set(stringArray, forKey: "information")
         
+        
+        var lengthArray = UserDefaults.standard.object(forKey: "length") as! [Int]
+        
+        lengthArray.append(commenttext.text!.count)
+        
+        UserDefaults.standard.set(lengthArray, forKey: "length")
+        
         performSegue(withIdentifier: "gothird", sender: nil)
+            
+        }
+        
+        else {
+            
+            let alertController = UIAlertController(title: "入力不備あり", message: "文字数制限を守れていません", preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            
+            alertController.addAction(alertAction)
+            self.present(alertController, animated: true)
+            
+            
+        }
         
         
     }
