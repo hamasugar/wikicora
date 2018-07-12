@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Social
 
 class CheckViewController: UIViewController {
     
@@ -19,11 +20,14 @@ class CheckViewController: UIViewController {
     @IBOutlet weak var omake: UILabel!
     
     
+    @IBOutlet weak var twiButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
        
-    
+        let linkcolor:UIColor = UIColor(red: 6/256.0, green: 69/256.0, blue: 173/256.0, alpha: 1.0)
         
        
 
@@ -49,16 +53,15 @@ class CheckViewController: UIViewController {
     // リンクに値する部分を青く表示してデザインを整える
         text2.addAttribute(.font, value:UIFont.boldSystemFont(ofSize:11), range: NSMakeRange(0, lengthArray[0]))
         text2.addAttribute(.foregroundColor,
-                           value: UIColor.blue, range: NSMakeRange(lengthArray[0]+lengthArray[1]+2, 11))
+                           value: linkcolor, range: NSMakeRange(lengthArray[0]+lengthArray[1]+2, 11))
         
         text2.addAttribute(.foregroundColor,
-                           value: UIColor.blue, range: NSMakeRange(16+lengthArray[0]+lengthArray[1], lengthArray[2]))
+                           value: linkcolor, range: NSMakeRange(16+lengthArray[0]+lengthArray[1], lengthArray[2]))
         
         text2.addAttribute(.foregroundColor,
-                           value: UIColor.blue, range: NSMakeRange(19+lengthArray[0]+lengthArray[1]+lengthArray[2], lengthArray[3]))
+                           value: linkcolor, range: NSMakeRange(19+lengthArray[0]+lengthArray[1]+lengthArray[2], lengthArray[3]))
         
-        text2.addAttribute(.foregroundColor,
-                           value: UIColor.blue, range: NSMakeRange(lengthArray[0]+1, lengthArray[1]))
+       
         
         setumei.attributedText = text2
 
@@ -91,8 +94,60 @@ class CheckViewController: UIViewController {
     @IBAction func saveButton(_ sender: Any) {
         //ここでスクリーンショットを撮る
         // サイズを規定　位置は無視される
-        let rect:CGRect = CGRect(x:67, y: 70, width: 240, height: 382)
-
+        
+        
+        if UIApplication.shared.statusBarFrame.height == 44.0{
+            
+            print ("ten----------------------------")
+            print (UIApplication.shared.statusBarFrame.height)
+            
+            
+            let rect:CGRect = CGRect(x:67, y: 54, width: 240, height: 382)
+            
+            var hidari = 0
+            //左からどのくらいの位置に画像があるかを説明
+            hidari = Int(120-self.view.frame.size.width/2)
+            
+            // 以下は定型文通り
+            UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
+            
+            
+            let context = UIGraphicsGetCurrentContext()
+            
+            let aa:CGAffineTransform = CGAffineTransform(
+                translationX: CGFloat(hidari),y: -54 )
+            
+            context!.concatenate(aa)
+            
+            
+            view.layer.render(in: UIGraphicsGetCurrentContext()!)
+            
+            
+            //コンテキストから画像を取得する。
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            
+            //コンテキストを破棄する。
+            UIGraphicsEndImageContext()
+            
+            //画像をPhoto Albumに保存する。
+            UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
+            
+            
+            
+            
+            //入力されたデータを完全に破棄する
+            
+            UserDefaults.standard.set([String](), forKey: "information")
+            UserDefaults.standard.set([Int](),forKey:"length")
+            
+            
+            
+        }
+        
+        else{
+        let rect:CGRect = CGRect(x:67, y: 30, width: 240, height: 382)
+        print ("tenigai---------")
+            print (UIApplication.shared.statusBarFrame.height)
         var hidari = 0
         //左からどのくらいの位置に画像があるかを説明
         hidari = Int(120-self.view.frame.size.width/2)
@@ -104,9 +159,9 @@ class CheckViewController: UIViewController {
         let context = UIGraphicsGetCurrentContext()
         
         let aa:CGAffineTransform = CGAffineTransform(
-            translationX: CGFloat(hidari),y: -70 )
+            translationX: CGFloat(hidari),y: -30 )
         
-        context!.concatenate(aa )
+        context!.concatenate(aa)
         
         
         view.layer.render(in: UIGraphicsGetCurrentContext()!)
@@ -128,9 +183,62 @@ class CheckViewController: UIViewController {
         
         UserDefaults.standard.set([String](), forKey: "information")
         UserDefaults.standard.set([Int](),forKey:"length")
-        performSegue(withIdentifier: "goFirst", sender: nil)
-
+            
+        }
+        
     }
+    
+    
+    
+    @IBAction func TwiButton(_ sender: Any) {
+        
+        //ここでスクリーンショットを撮る
+        // サイズを規定　位置は無視される
+        let rect:CGRect = CGRect(x:self.view.frame.size.width/2-120, y: 30, width: 240, height: 382)
+        
+        var hidari = 0
+        //左からどのくらいの位置に画像があるかを説明
+        hidari = Int(120-self.view.frame.size.width/2)
+        
+        // 以下は定型文通り
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
+        
+        
+        let context = UIGraphicsGetCurrentContext()
+        let top = UIApplication.shared.statusBarFrame.height+10.0
+
+        let aa:CGAffineTransform = CGAffineTransform(
+            translationX: CGFloat(hidari),y: -top )
+        
+        context!.concatenate(aa)
+        
+        
+        view.layer.render(in: UIGraphicsGetCurrentContext()!)
+        
+        
+        //コンテキストから画像を取得する。
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        
+        //コンテキストを破棄する。
+        UIGraphicsEndImageContext()
+        
+       
+        //入力されたデータを完全に破棄する
+        
+        UserDefaults.standard.set([String](), forKey: "information")
+        UserDefaults.standard.set([Int](),forKey:"length")
+        
+        let twitter = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+        
+        
+        twitter?.add(image)
+        self.present(twitter!,animated:true,completion:nil)
+        
+
+        
+    }
+    
+    
     
 
     /*

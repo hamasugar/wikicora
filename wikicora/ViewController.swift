@@ -23,8 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var businesstext: UITextField!
     
     
-    @IBOutlet weak var datepicker: UIDatePicker!
-    
+   
     
     
     
@@ -32,12 +31,13 @@ class ViewController: UIViewController {
     var lengthArray = [Int]()
     var testLabel = ""
     
+    @IBOutlet weak var saveButton: UIButton!
     
     @IBAction func savebutton(_ sender: Any) {
         
      
         
-        if (nametext.text!.count>=1) && (furiganatext.text!.count>=1) && (fromtext.text!.count>=1)  && (businesstext.text!.count>=1){
+        if (nametext.text!.count>=1) && (furiganatext.text!.count>=1) && (fromtext.text!.count>=1)  && (businesstext.text!.count>=1) && nametext.text!.count+furiganatext.text!.count+fromtext.text!.count+businesstext.text!.count<=40{
             
             
             stringArray.append(nametext.text!)
@@ -45,17 +45,9 @@ class ViewController: UIViewController {
             stringArray.append(fromtext.text!)
             stringArray.append(businesstext.text!)
             
-            let formatter = DateFormatter()
-            // 5月生まれなら05月となってしまうのが難点
-            formatter.dateFormat = "yyyy年MM月dd日"
-            
-            testLabel = formatter.string(from: datepicker.date)
-            
-            
-            stringArray.append(testLabel)
             
             // 左から順番に、名前、ふりがな、出身地、職業、生年月日を保持している配列
-            lengthArray = [stringArray[0].count,stringArray[1].count,stringArray[2].count,stringArray[3].count,stringArray[4].count]
+            lengthArray = [stringArray[0].count,stringArray[1].count,stringArray[2].count,stringArray[3].count,11]
             
             
             //すぐ上の配列をUserDefaultsとして保存
@@ -112,6 +104,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        saveButton.layer.masksToBounds = true
+        saveButton.layer.cornerRadius = 10.0
     }
 
     override func didReceiveMemoryWarning() {

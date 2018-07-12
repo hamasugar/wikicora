@@ -8,12 +8,17 @@
 
 import UIKit
 
-class CommentViewController: UIViewController {
+class CommentViewController: UIViewController,UITextViewDelegate {
     
     
-    @IBOutlet weak var commenttext: UITextField!
+
+    @IBOutlet weak var commenttext: UITextView!
     
     @IBOutlet weak var limittext: UILabel!
+    
+    @IBOutlet weak var mozisuu: UILabel!
+    
+    @IBOutlet weak var createButton: UIButton!
     
     // ２つの文字には入力できる最大の文字数と最小の文字数を保存しておく
     var minimum:Int = 0
@@ -21,11 +26,13 @@ class CommentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        commenttext.delegate = self
+        commenttext.layer.borderWidth = 1.0
         //先ほどの長さの合計を取り出す
         var lengthArray = UserDefaults.standard.object(forKey: "length") as! [Int]
         
         
-        var nowcount = lengthArray[0]+lengthArray[1]+lengthArray[2]+lengthArray[3]
+        let nowcount = lengthArray[0]+lengthArray[1]+lengthArray[2]+lengthArray[3]
         // 46文字以上８６文字以下がコラ画像生成のレイアウトの限界である
          minimum = 46-nowcount
          maximum = 86-nowcount
@@ -33,7 +40,8 @@ class CommentViewController: UIViewController {
         // 制限をあらかじめラベルで教えておく
         limittext.text = "\(minimum)文字以上\(maximum)文字以下で入力してください"
         
-        
+        createButton.layer.masksToBounds = true
+        createButton.layer.cornerRadius = 20.0
 
         // Do any additional setup after loading the view.
     }
@@ -84,6 +92,17 @@ class CommentViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        
+        mozisuu.text = "改行と最後の。は不要　現在\(commenttext.text.count)文字"
+        
+        return true
+    }
+    
+    
+    
+   
     
     /*
     // MARK: - Navigation

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CEB0206D20E771B500962008 /* wiki.png in Resources */ = {isa = PBXBuildFile; fileRef = CEB0206C20E771B400962008 /* wiki.png */; };
+		CEE078FB20EF4B44005F53BD /* BirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE078FA20EF4B44005F53BD /* BirthdayViewController.swift */; };
 		E04859A220E20FCD00DA10FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04859A120E20FCD00DA10FB /* AppDelegate.swift */; };
 		E04859A420E20FCD00DA10FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04859A320E20FCD00DA10FB /* ViewController.swift */; };
 		E04859A720E20FCD00DA10FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04859A520E20FCD00DA10FB /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CEB0206C20E771B400962008 /* wiki.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wiki.png; sourceTree = "<group>"; };
+		CEE078FA20EF4B44005F53BD /* BirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewController.swift; sourceTree = "<group>"; };
 		E048599E20E20FCD00DA10FB /* wikicora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wikicora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E04859A120E20FCD00DA10FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E04859A320E20FCD00DA10FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +56,7 @@
 			children = (
 				E04859A020E20FCD00DA10FB /* wikicora */,
 				E04859C220E229BC00DA10FB /* IMG_2677.jpg */,
+				CEB0206C20E771B400962008 /* wiki.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +75,7 @@
 				E04859A120E20FCD00DA10FB /* AppDelegate.swift */,
 				E04859A320E20FCD00DA10FB /* ViewController.swift */,
 				E04859B520E217BD00DA10FB /* CommentViewController.swift */,
+				CEE078FA20EF4B44005F53BD /* BirthdayViewController.swift */,
 				E04859A520E20FCD00DA10FB /* Main.storyboard */,
 				E048599F20E20FCD00DA10FB /* Products */,
 				E04859BB20E2262E00DA10FB /* ipaexm00301 */,
@@ -156,6 +162,7 @@
 				E04859BF20E2262F00DA10FB /* ipaexm.ttf in Resources */,
 				E04859C020E2262F00DA10FB /* IPA_Font_License_Agreement_v1.0.txt in Resources */,
 				E04859A720E20FCD00DA10FB /* Main.storyboard in Resources */,
+				CEB0206D20E771B500962008 /* wiki.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEE078FB20EF4B44005F53BD /* BirthdayViewController.swift in Sources */,
 				E04859A420E20FCD00DA10FB /* ViewController.swift in Sources */,
 				E04859BA20E224F700DA10FB /* CheckViewController.swift in Sources */,
 				E04859A220E20FCD00DA10FB /* AppDelegate.swift in Sources */,
@@ -246,7 +254,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -300,7 +308,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -317,7 +325,7 @@
 				DEVELOPMENT_TEAM = MR34XK582H;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = wikicora/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -337,7 +345,7 @@
 				DEVELOPMENT_TEAM = MR34XK582H;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = wikicora/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
